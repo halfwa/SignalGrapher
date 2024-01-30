@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalGrapher.API", "SignalGrapher.API\SignalGrapher.API.csproj", "{BC333E04-AF73-4B1D-A550-57E745A0372A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalGrapher.Domain", "SignalGrapher.Domain\SignalGrapher.Domain.csproj", "{2967E4F3-8245-4DED-98D1-D3587801121C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalGrapher.Application", "SignalGrapher.Application\SignalGrapher.Application.csproj", "{EAFA2258-4496-4F85-A0F4-4DBBD6723890}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalGrapher.Infrastructure", "SignalGrapher.Infrastructure\SignalGrapher.Infrastructure.csproj", "{800C4B22-9338-43D2-953E-31B7E4389810}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{58158267-7B56-411E-AA2E-4FCB0B0B9960}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{D657C007-FED6-46AB-9952-451D532C8423}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1E810144-E6DD-4987-8F0D-E1EA35707EAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC333E04-AF73-4B1D-A550-57E745A0372A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC333E04-AF73-4B1D-A550-57E745A0372A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC333E04-AF73-4B1D-A550-57E745A0372A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC333E04-AF73-4B1D-A550-57E745A0372A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2967E4F3-8245-4DED-98D1-D3587801121C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2967E4F3-8245-4DED-98D1-D3587801121C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2967E4F3-8245-4DED-98D1-D3587801121C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2967E4F3-8245-4DED-98D1-D3587801121C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAFA2258-4496-4F85-A0F4-4DBBD6723890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFA2258-4496-4F85-A0F4-4DBBD6723890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFA2258-4496-4F85-A0F4-4DBBD6723890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFA2258-4496-4F85-A0F4-4DBBD6723890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{800C4B22-9338-43D2-953E-31B7E4389810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800C4B22-9338-43D2-953E-31B7E4389810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800C4B22-9338-43D2-953E-31B7E4389810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800C4B22-9338-43D2-953E-31B7E4389810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E810144-E6DD-4987-8F0D-E1EA35707EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E810144-E6DD-4987-8F0D-E1EA35707EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E810144-E6DD-4987-8F0D-E1EA35707EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E810144-E6DD-4987-8F0D-E1EA35707EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC333E04-AF73-4B1D-A550-57E745A0372A} = {D657C007-FED6-46AB-9952-451D532C8423}
+		{2967E4F3-8245-4DED-98D1-D3587801121C} = {58158267-7B56-411E-AA2E-4FCB0B0B9960}
+		{EAFA2258-4496-4F85-A0F4-4DBBD6723890} = {58158267-7B56-411E-AA2E-4FCB0B0B9960}
+		{800C4B22-9338-43D2-953E-31B7E4389810} = {D657C007-FED6-46AB-9952-451D532C8423}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0612AEB5-7BCD-4CFB-8FCA-BB046D629712}
+	EndGlobalSection
+EndGlobal

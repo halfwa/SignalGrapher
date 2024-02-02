@@ -27,3 +27,18 @@ services:
         POSTGRES_DB: postgres
     networks:
         - dev
+
+  client:
+    container_name: client
+    build:
+      context: ./SignalGrapher.ClientApp
+      dockerfile: Dockerfile
+    networks:
+          - dev
+  
+  proxy: 
+    image: nginx:mainline
+    depends_on:
+          -  signalgrapher.api
+    networks:
+          - dev

@@ -30,9 +30,7 @@ namespace SignalGrapher.API.Controllers
 
             await Sender.Send(command, cancellationToken);
 
-            var url = Url.Action("GetByIdSignalImage", new { signalId = command.Id })!;
-
-            return Redirect(url);
+            return CreatedAtAction(nameof(GetByIdSignalImage), new { signalId = command.Id }, command);
         }
 
         [HttpGet("{signalId:guid}")]
@@ -42,13 +40,11 @@ namespace SignalGrapher.API.Controllers
 
             var response = await Sender.Send(query, cancellationToken);
 
-            var fileName = $"signal_image_{signalId}.png";
+            var fileName = $"signal_image.png";
             var contentType = "application/octet-stream"; ;
             Response.Headers.Append("Content-Disposition", $"attachment; filename={fileName}");
 
             return File(response.ImageBytes, contentType, fileName);
-        }
-
-            
+        }          
     }
 }

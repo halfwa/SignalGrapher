@@ -13,8 +13,8 @@ public sealed class PlotterService : IPlotterService
 
         var result = signal.GenerateSinusoidalSignal();
 
-        plt.Add.Scatter(result.Time, result.Amplitude, Colors.Red);
-/*        plt.Axes.Left.Label.Text = "Amplitude";
+        plt.Add.SignalXY(result.Time, result.Amplitude, Colors.Red);
+/*      plt.Axes.Left.Label.Text = "Amplitude";
         plt.Axes.Title.Label.Text = "Sinusoidal Signal";
         plt.Axes.Bottom.Label.Text = "Time (s)";
         plt.Legend.IsVisible = true;

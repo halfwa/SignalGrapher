@@ -24,4 +24,8 @@
     <ProjectReference Include="..\SignalGrapher.Infrastructure\SignalGrapher.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="statics\images\" />
+  </ItemGroup>
+
 </Project>

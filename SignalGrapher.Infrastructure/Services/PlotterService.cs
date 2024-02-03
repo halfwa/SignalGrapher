@@ -9,19 +9,20 @@ public sealed class PlotterService : IPlotterService
 
     public async Task DrawPlotImage(SinusoidalSignal signal)
     {
-        Plot myPlot = new();
+        Plot plt = new();
 
-        myPlot.Add.Signal(signal.GenerateSinusoidalSignal());
+        var result = signal.GenerateSinusoidalSignal();
 
-        myPlot.XLabel("Horizonal Axis");
-        myPlot.YLabel("Vertical Axis");
-        myPlot.Title("Sinusoidal Signal");
+        plt.Add.Scatter(result.Time, result.Amplitude, Colors.Red);
+/*        plt.Axes.Left.Label.Text = "Amplitude";
+        plt.Axes.Title.Label.Text = "Sinusoidal Signal";
+        plt.Axes.Bottom.Label.Text = "Time (s)";
+        plt.Legend.IsVisible = true;
+        plt.ShowLegend(); */ 
 
         var path = Path.Combine(Directory.GetCurrentDirectory(), "statics", "images");
-        Directory.CreateDirectory(path);
-
-        var filePath = Path.Combine(path, $"{signal.Id}.png");
-        myPlot.SavePng(filePath, 800, 600);
+        var filePath = Path.Combine(path, $"{signal.Id}.jpeg");
+        plt.SaveJpeg(filePath, 800, 600);
 
         byte[] imageBytes;
         using (var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
@@ -29,8 +30,7 @@ public sealed class PlotterService : IPlotterService
             imageBytes = new byte[fileStream.Length];
             await fileStream.ReadAsync(imageBytes, 0, (int)fileStream.Length);
         }
-
-        Directory.Delete(path, true);
+        File.Delete(filePath);
 
         signal.SetPlotImage(imageBytes);
     }

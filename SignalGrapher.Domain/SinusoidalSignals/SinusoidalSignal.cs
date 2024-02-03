@@ -69,18 +69,19 @@
             return (signal, error);
         }
 
-        public double[] GenerateSinusoidalSignal()
+        public (double[] Time, double[] Amplitude) GenerateSinusoidalSignal()
         {
             int totalSamples = (int)(SamplingFrequency * PeriodValue);
-            double[] signal = new double[totalSamples];
+            double[] time = new double[totalSamples];
+            double[] amplitude = new double[totalSamples];
 
             for (int i = 0; i < totalSamples; i++)
             {
-                double t = i / SamplingFrequency;
-                signal[i] = Amplitude * Math.Sin(2 * PI * SignalFrequency * t);
+                time[i] = i / SamplingFrequency;
+                amplitude[i] = Amplitude * Math.Sin(2 * PI * SignalFrequency * time[i]);
             }
 
-            return signal;
+            return (time, amplitude);
         }
     }
 }

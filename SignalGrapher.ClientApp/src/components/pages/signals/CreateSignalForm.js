@@ -35,7 +35,7 @@ const CreateSignalForm = () => {
 
       const blob = await responseGet.blob();
       const url = URL.createObjectURL(blob);
-      const filename = `signal_image_${signal.id}.png`;
+      const filename = `signal_image_${signal.id}.jpeg`;
 
       setFile({ filename, url});
 
@@ -44,6 +44,7 @@ const CreateSignalForm = () => {
       notification.success({
         message: 'Подтверждение',
         description: 'Запрос успешно обработан!',
+        placement: 'bottomRight'
       });
     } catch (err) {
 

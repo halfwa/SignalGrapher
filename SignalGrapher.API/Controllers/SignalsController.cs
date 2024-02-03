@@ -40,7 +40,7 @@ namespace SignalGrapher.API.Controllers
 
             var response = await Sender.Send(query, cancellationToken);
 
-            var fileName = $"signal_image.png";
+            var fileName = $"signal_image.jpeg";
             var contentType = "application/octet-stream"; ;
             Response.Headers.Append("Content-Disposition", $"attachment; filename={fileName}");
 

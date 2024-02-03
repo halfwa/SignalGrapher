@@ -21,6 +21,12 @@ public sealed class PlotterService : IPlotterService
         plt.ShowLegend(); */ 
 
         var path = Path.Combine(Directory.GetCurrentDirectory(), "statics", "images");
+
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
         var filePath = Path.Combine(path, $"{signal.Id}.jpeg");
         plt.SaveJpeg(filePath, 800, 600);
 
